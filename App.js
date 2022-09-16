@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { StyleSheet, Text, TextInput, Button, View } from 'react-native';
 import React from 'react'; 
 
 export default function App() {
@@ -10,6 +10,7 @@ export default function App() {
       clearTextOnFocus='true' 
       onChangeText={text => setValue(text)}></TextInput>
       <Text style={styles.textView}>{value}</Text>
+      <Button title='Clear' color="#841584" onPress={() => setValue('')}></Button>
     </View>
   );
 }
